@@ -6,21 +6,13 @@
 #    By: mrodrigu <mrodrigu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/24 11:56:09 by mrodrigu          #+#    #+#              #
-#    Updated: 2018/06/30 16:10:10 by mrodrigu         ###   ########.fr        #
+#    Updated: 2018/07/10 14:59:13 by mrodrigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import json
 import requests
 
-PAGE_TOKEN = "EAACEdEose0cBAPJFHY4XoJ8RjZAPJ9uKKGZAOtZCFDyl0FSQIql3cHvJ68ysZALzVZBwpZBzId2ZAADYy8ghSNkoTybsqxDl0LZBpibBRWzjY29N2Omph4ibGGmXHEgZBvauuTZB2E00Vs0IarnFjLtiPdtwRQu0vVFZA9rXTZCzfZADtXceHHD8zR4fD02Js0k9ZAPUInsaEs4cZAxcgZDZD"
-PAGE_TOKEN_PERMANENT = "EAACmfVZAQJwABAKNWZACWIX1we5sVa0vAmkcKLB6zUulcyqoOk0F7gLnJrXyc1yQtIMtzyft45tjyIUQDvlAHdRm3l0pnQpNI3ybjahzZAbFqVGaoedKX7i49eBtRCNkF43QAZAz48R3KhepGYepuighRPYs459TTtIY9BBnZCAZDZD`1"
-USER_TOKEN_SHORT = "EAACmfVZAQJwABANUHIcDWWwdPz3X7kEun2V9uPZBfupOCtYEWLCBZBePlDVX2a1BEj8ZCK0CZBYutERZA7yWi1TxRkKZC0nP2zcKEkY2lj2TmUb8y5RSPNKGbanTAZB86ICBVANWSwDrpFv2EDUO3FBnF8D56LJZBfxsZBT6kkdCZC7e9VC8elYZCAKcGeStZAzRvrZCwsHoTsFyeLXwZDZD"
-USER_TOKEN_PERMANENT = "EAACmfVZAQJwABAGMyEquQWk6Hz3G7COhe4cvqobBJreZCZAZAHtY7QK9S8MRXDTqAxOc3psHBSsXg2sxQaufq37az4wD35mjH0nSeCQlad0C2BF6fjueTG0nmCR8oVDr1XaTYkIQ90DjRpw2VnWO3j1c9M7aCHRxQZBt6jgXvvgZDZD"
-PAGE_ID = "371121376687075"
-APP_ID = "183057249216256"
-APP_SECRET = "1be7a9feb2c15b9b4e4c05cdcb51a337"
-COMMENT_ID = "371121376687075_424570551342157"
 
 def get_permanent_user_token(app_id = APP_ID, app_secret = APP_SECRET, user_token_short = USER_TOKEN_SHORT):
 	url = "https://graph.facebook.com/v3.0/oauth/access_token?grant_type=fb_exchange_token&client_id={}&client_secret={}&fb_exchange_token={}".format(app_id, app_secret, user_token_short)
